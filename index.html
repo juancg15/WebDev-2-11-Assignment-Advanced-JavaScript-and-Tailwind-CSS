@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+
+    https://cdn.tailwindcss.comscript>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="flex justify-center gap-6">
+            <button class="hover:text-gray-200">Weight</button>
+            <button class="hover:text-gray-200">Distance</button>
+            <button class="hover:text-gray-200">Temperature</button>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto p-6">
+
+        <!-- Weight Converter -->
+        <section class="bg-white p-6 rounded-lg shadow mb-6">
+
+            <h2 class="text-2xl font-bold mb-4">
+                Weight Converter
+            </h2>
+
+            <!-- Single Value -->
+            <h3 class="font-semibold mb-2">
+                Single Value Conversion
+            </h3>
+
+            <input
+                type="number"
+                id="weightValue"
+                placeholder="Enter weight"
+                class="w-full border rounded p-2 mb-2"
+            >
+
+            <div class="flex gap-2 mb-2">
+                <select id="weightFrom" class="border rounded p-2">
+                    <option value="kg">Kilograms</option>
+                    <option value="lb">Pounds</option>
+                </select>
+
+                <select id="weightTo" class="border rounded p-2">
+                    <option value="lb">Pounds</option>
+                    <option value="kg">Kilograms</option>
+                </select>
+            </div>
+
+            <button
+                id="weightConvert"
+                class="bg-blue-500 text-white px-4 py-2 rounded"
+            >
+                Convert
+            </button>
+
+            <p id="weightResult" class="mt-3 font-medium"></p>
+
+            <!-- Array Conversion -->
+
+            <h3 class="font-semibold mt-6 mb-2">
+                Array Conversion
+            </h3>
+
+            <textarea
+                id="weightArray"
+                placeholder="10,20,30"
+                class="w-full border rounded p-2"
+            ></textarea>
+
+            <button
+                id="weightArrayConvert"
+                class="bg-green-500 text-white px-4 py-2 rounded mt-2"
+            >
+                Convert Array
+            </button>
+
+            <p id="weightArrayResult" class="mt-3 font-medium"></p>
+
+        </section>
+
+
+        <!-- Distance Converter -->
+        <section class="bg-white p-6 rounded-lg shadow mb-6">
+
+            <h2 class="text-2xl font-bold mb-4">
+                Distance Converter
+            </h2>
+
+            <input
+                type="number"
+                id="distanceValue"
+                placeholder="Enter distance"
+                class="w-full border rounded p-2 mb-2"
+            >
+
+            <div class="flex gap-2 mb-2">
+                <select id="distanceFrom" class="border rounded p-2">
+                    <option value="km">Kilometres</option>
+                    <option value="mi">Miles</option>
+                </select>
+
+                <select id="distanceTo" class="border rounded p-2">
+                    <option value="mi">Miles</option>
+                    <option value="km">Kilometres</option>
+                </select>
+            </div>
+
+            <button
+                id="distanceConvert"
+                class="bg-blue-500 text-white px-4 py-2 rounded"
+            >
+                Convert
+            </button>
+
+            <p id="distanceResult" class="mt-3 font-medium"></p>
+
+        </section>
+
+
+        <!-- Temperature Converter -->
+        <section class="bg-white p-6 rounded-lg shadow">
+
+            <h2 class="text-2xl font-bold mb-4">
+                Temperature Converter
+            </h2>
+
+            <input
+                type="number"
+                id="temperatureValue"
+                placeholder="Enter temperature"
+                class="w-full border rounded p-2 mb-2"
+            >
+
+            <div class="flex gap-2 mb-2">
+                <select id="temperatureFrom" class="border rounded p-2">
+                    <option value="C">Celsius</option>
+                    <option value="F">Fahrenheit</option>
+                </select>
+
+                <select id="temperatureTo" class="border rounded p-2">
+                    <option value="F">Fahrenheit</option>
+                    <option value="C">Celsius</option>
+                </select>
+            </div>
+
+            <button
+                id="temperatureConvert"
+                class="bg-blue-500 text-white px-4 py-2 rounded"
+            >
+                Convert
+            </button>
+
+            <p id="temperatureResult" class="mt-3 font-medium"></p>
+
+        </section>
+
+    </div>
+
+</body>
+</html>
