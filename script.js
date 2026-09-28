@@ -78,3 +78,62 @@ console.log(cToF(0));
 console.log(fToC(32));
 
 console.log(kgToLb([10, 20, 30]));
+
+
+// Weight conversion
+document.getElementById("weightConvert").addEventListener("click", () => {
+
+    const value = Number(document.getElementById("weightValue").value);
+    const fromUnit = document.getElementById("weightFrom").value;
+    const toUnit = document.getElementById("weightTo").value;
+
+    const converter = createConverter(fromUnit, toUnit);
+    const result = converter(value);
+
+    document.getElementById("weightResult").textContent = result;
+});
+
+
+// Weight array conversion
+document.getElementById("weightArrayConvert").addEventListener("click", () => {
+
+    const input = document.getElementById("weightArray").value;
+
+    const values = input.split(",").map(value => Number(value.trim()));
+
+    const fromUnit = document.getElementById("weightFrom").value;
+    const toUnit = document.getElementById("weightTo").value;
+
+    const converter = createConverter(fromUnit, toUnit);
+    const result = converter(values);
+
+    document.getElementById("weightArrayResult").textContent = result.join(", ");
+});
+
+
+// Distance conversion
+document.getElementById("distanceConvert").addEventListener("click", () => {
+
+    const value = Number(document.getElementById("distanceValue").value);
+    const fromUnit = document.getElementById("distanceFrom").value;
+    const toUnit = document.getElementById("distanceTo").value;
+
+    const converter = createConverter(fromUnit, toUnit);
+    const result = converter(value);
+
+    document.getElementById("distanceResult").textContent = result;
+});
+
+
+// Temperature conversion
+document.getElementById("temperatureConvert").addEventListener("click", () => {
+
+    const value = Number(document.getElementById("temperatureValue").value);
+    const fromUnit = document.getElementById("temperatureFrom").value;
+    const toUnit = document.getElementById("temperatureTo").value;
+
+    const converter = createConverter(fromUnit, toUnit);
+    const result = converter(value);
+
+    document.getElementById("temperatureResult").textContent = result;
+});
